@@ -1,0 +1,702 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description" content="Rajesh &amp; Bhargavi — a digital wedding invitation with an Indian ethnic theme. 20 &amp; 21 November 2027, Jodhpur." />
+  <meta property="og:title" content="Rajesh &amp; Bhargavi — Wedding Invitation" />
+  <meta property="og:description" content="Join us for Haldi, Sangeet, Vivaah &amp; Reception — 20 &amp; 21 November 2027, Jodhpur." />
+  <meta property="og:type" content="website" />
+
+  <meta name="theme-color" content="#0d1c1c" />
+
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+
+  <title>Rajesh &amp; Bhargavi — Wedding Invitation</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Great+Vibes&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Original stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Continuous scrolling overrides -->
+  <link rel="stylesheet" href="css/scroll-overrides.css" />
+</head>
+
+<body>
+
+  <!-- =====================================================
+       SPLASH SCREEN
+       ===================================================== -->
+
+  <div id="splash">
+
+    <div
+      class="splash-ring"
+      style="width:220px;height:220px;animation-duration:4s;"
+    ></div>
+
+    <div
+      class="splash-ring"
+      style="width:340px;height:340px;animation-duration:6s;animation-delay:0.8s;"
+    ></div>
+
+    <div
+      class="splash-ring"
+      style="width:480px;height:480px;animation-duration:9s;animation-delay:1.6s;"
+    ></div>
+
+    <div
+      class="splash-ring"
+      style="width:640px;height:640px;animation-duration:12s;animation-delay:2.4s;border-style:dashed;"
+    ></div>
+
+    <div id="splash-inner">
+
+      <div id="splash-shri-ganesh">
+        श्री गणेशाय नमः
+      </div>
+
+      <div
+        id="splash-couple"
+        style="width:clamp(180px,48vw,260px);height:clamp(180px,48vw,260px);border-radius:50%;border:3px solid rgba(212,175,55,0.7);box-shadow:0 0 32px rgba(212,175,55,0.4);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;background:rgba(255,248,225,0.08);font-size:64px;"
+      >
+        👫
+      </div>
+
+      <p id="splash-guest"></p>
+
+      <h1 id="splash-title">
+        Please grace us with your presence on our special day.
+      </h1>
+
+      <button
+        id="splash-btn"
+        aria-label="Open the wedding invitation"
+      >
+        Open Invitation 💍
+      </button>
+
+      <p id="splash-note">
+        🔊 Best experienced with sound on
+      </p>
+
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       MANDALA BACKGROUND
+       ===================================================== -->
+
+  <div id="mandala-bg">
+
+    <div id="mandala-outer"></div>
+
+    <div id="mandala-inner"></div>
+
+  </div>
+
+
+  <!-- =====================================================
+       BACKGROUND MUSIC
+       ===================================================== -->
+
+  <audio
+    id="bg-audio"
+    src="assets/audio/music.mp3"
+    loop
+    preload="auto"
+  ></audio>
+
+
+  <!-- =====================================================
+       GUEST BANNER
+       Shown when ?guest=Name is provided in the URL
+       ===================================================== -->
+
+  <div id="guest-banner" style="display:none">
+
+    <span id="guest-text"></span>
+
+  </div>
+
+
+  <!-- =====================================================
+       FLOATING PETALS
+       ===================================================== -->
+
+  <div id="petals-canvas"></div>
+
+
+  <!-- =====================================================
+       SECTION 0 — WELCOME
+       ===================================================== -->
+
+  <section
+    class="screen"
+    id="screen-welcome"
+    aria-label="Welcome"
+  >
+
+    <div class="card">
+
+      <div class="corner-tr"></div>
+      <div class="corner-bl"></div>
+
+      <div class="om">
+        ॐ
+      </div>
+
+      <div
+        class="divider"
+        style="font-size:clamp(16px,2.5vw,22px);letter-spacing:0.2em;font-weight:600;"
+      >
+        Shubh Vivah
+      </div>
+
+
+      <!-- Couple photo placeholder -->
+
+      <div class="photo-wrap" id="couple-photo">
+
+        <div
+          class="photo-placeholder"
+          style="font-size:48px;"
+        >
+          👫
+        </div>
+
+      </div>
+
+
+      <!-- Couple names and parents -->
+
+      <div class="couple-stack">
+
+        <div class="name-group">
+
+          <span class="couple-names shimmer-text">
+            Rajesh
+          </span>
+
+          <div class="parent-names">
+            Chinnayya Molleti<br />
+            &amp; Satyamani Molleti
+          </div>
+
+        </div>
+
+        <span class="ampersand">
+          &amp;
+        </span>
+
+        <div class="name-group">
+
+          <span class="couple-names shimmer-text">
+            Bhargavi
+          </span>
+
+          <div class="parent-names">
+            Raju Anaparthi<br />
+            &amp; Lova Kumari Anaparthi
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Wedding date and location -->
+
+      <div class="welcome-footer">
+
+        <p class="welcome-dates">
+          20 &amp; 21 November 2026
+        </p>
+
+        <p class="welcome-venue">
+          Dharmasagaram, Narsipatnam
+        </p>
+
+        <div class="flower-row">
+          <span>🌸</span>
+          <span>🪷</span>
+          <span>🌸</span>
+          <span>🪷</span>
+          <span>🌸</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       SECTION 1 — HALDI
+       ===================================================== -->
+
+  <section
+    class="screen"
+    id="screen-haldi"
+    aria-label="Haldi ceremony"
+  >
+
+    <div
+      class="theme-canvas"
+      id="tc-haldi"
+    ></div>
+
+    <div class="card">
+
+      <div class="corner-tr"></div>
+      <div class="corner-bl"></div>
+
+      <div class="ceremony-icon">
+        🌼
+      </div>
+
+      <div class="ceremony-title">
+        Haldi
+      </div>
+
+      <div class="ceremony-subtitle">
+        The Sacred Turmeric Ceremony
+      </div>
+
+      <div class="divider"></div>
+
+
+      <div class="detail-grid">
+
+        <div class="detail-row">
+
+          <span class="detail-label">
+            📅 Date
+          </span>
+
+          <span class="detail-value">
+            Saturday, 20 November 2026
+          </span>
+
+        </div>
+
+        <div class="detail-row">
+
+          <span class="detail-label">
+            ⏰ Time
+          </span>
+
+          <span class="detail-value">
+            12:00 PM onwards
+          </span>
+
+        </div>
+
+        <div class="detail-row">
+
+          <span class="detail-label">
+            📍 Venue
+          </span>
+
+          <span class="detail-value">
+
+            <a
+              class="maps-link"
+              href="https://maps.app.goo.gl/FYpXBo9HoVuoKyMNA"
+              target="_blank"
+              rel="noopener"
+            >
+              🗺 Dharmasagaram
+            </a>
+
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="divider"></div>
+
+      <p
+        style="font-size:clamp(16px,3vw,22px);color:rgba(255,248,225,0.85);line-height:1.8;font-style:italic;font-weight:600;"
+      >
+        A joyous morning of turmeric, laughter, and love —<br />
+        blessings painted in gold.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       SECTION 3 — VIVAAH
+       ===================================================== -->
+
+  <section
+    class="screen"
+    id="screen-vivaah"
+    aria-label="Wedding ceremony"
+  >
+
+    <div
+      class="theme-canvas"
+      id="tc-vivaah"
+    ></div>
+
+    <div class="card">
+
+      <div class="corner-tr"></div>
+      <div class="corner-bl"></div>
+
+      <div class="ceremony-icon">
+        🪔
+      </div>
+
+      <div class="ceremony-title">
+        Vivaah
+      </div>
+
+      <div class="ceremony-subtitle">
+        The Sacred Wedding Ceremony
+      </div>
+
+      <div class="divider"></div>
+
+
+      <div class="detail-grid">
+
+        <div class="detail-row">
+
+          <span class="detail-label">
+            📅 Date
+          </span>
+
+          <span class="detail-value">
+            Saturday, 21 November 2026
+          </span>
+
+        </div>
+
+        <div class="detail-row">
+
+          <span class="detail-label">
+            ⏰ Time
+          </span>
+
+          <span class="detail-value">
+            9:40 PM onwards
+          </span>
+
+        </div>
+
+        <div class="detail-row">
+
+          <span class="detail-label">
+            📍 Venue
+          </span>
+
+          <span class="detail-value">
+
+            <a
+              class="maps-link"
+              href="https://maps.app.goo.gl/FYpXBo9HoVuoKyMNA"
+              target="_blank"
+              rel="noopener"
+            >
+              🗺 Dharmasagaram, Narsipatnam
+            </a>
+
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="divider"></div>
+
+      <p
+        style="font-size:clamp(16px,3vw,22px);color:rgba(255,248,225,0.85);line-height:1.8;font-style:italic;font-weight:600;"
+      >
+        Two souls unite in the sacred fire —<br />
+        joined forever by love and the Vedic rites.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       SECTION 4 — RECEPTION
+       ===================================================== -->
+
+  <section
+    class="screen"
+    id="screen-reception"
+    aria-label="Wedding reception"
+  >
+
+    <div
+      class="theme-canvas"
+      id="tc-reception"
+    ></div>
+
+    <div class="card">
+
+      <div class="corner-tr"></div>
+      <div class="corner-bl"></div>
+
+      <div class="ceremony-icon">
+        ✨
+      </div>
+
+      <div class="ceremony-title">
+        Reception
+      </div>
+
+      <div class="ceremony-subtitle">
+        A Grand Celebration
+      </div>
+
+      <div class="divider"></div>
+
+
+      <div class="detail-grid">
+
+        <div class="detail-row">
+
+          <span class="detail-label">
+            📅 Date
+          </span>
+
+          <span class="detail-value">
+            Saturday, 21 November 2026
+          </span>
+
+        </div>
+
+        <div class="detail-row">
+
+          <span class="detail-label">
+            ⏰ Time
+          </span>
+
+          <span class="detail-value">
+            6:00 PM onwards
+          </span>
+
+        </div>
+
+        <div class="detail-row">
+
+          <span class="detail-label">
+            📍 Venue
+          </span>
+
+          <span class="detail-value">
+
+            <a
+              class="maps-link"
+              href="https://maps.app.goo.gl/FYpXBo9HoVuoKyMNA"
+              target="_blank"
+              rel="noopener"
+            >
+              🗺 At home Dharmasagaram Village
+            </a>
+
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="divider"></div>
+
+      <p
+        style="font-size:clamp(16px,3vw,22px);color:rgba(255,248,225,0.85);line-height:1.8;font-style:italic;font-weight:600;"
+      >
+        Join us for an evening of elegance, joy, and celebration<br />
+        as we welcome the newlyweds.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       SECTION 5 — ALL EVENTS / SUMMARY
+       ===================================================== -->
+
+  <section
+    class="screen"
+    id="screen-all"
+    aria-label="Wedding event summary"
+  >
+
+    <div
+      class="card"
+      style="max-width:min(780px,96vw)"
+    >
+
+      <div class="corner-tr"></div>
+      <div class="corner-bl"></div>
+
+      <div class="om">
+        ॐ
+      </div>
+
+      <div
+        class="ceremony-title"
+        style="font-size:clamp(22px,5vw,38px)"
+      >
+        We warmly invite you to
+      </div>
+
+      <div class="divider"></div>
+
+
+      <!-- Event summary grid -->
+
+      <div class="events-grid">
+
+        <div class="event-mini">
+
+          <div class="event-mini-title">
+            🌼 Haldi
+          </div>
+
+          <p>
+            Fri, 20 Nov 2026 · 06:00 PM<br />
+
+            <a
+              href="https://maps.app.goo.gl/FYpXBo9HoVuoKyMNA"
+              target="_blank"
+              rel="noopener"
+            >
+              📍 At home, Dharmasagaram
+            </a>
+          </p>
+
+        </div>
+
+
+        <div class="event-mini">
+
+          <div class="event-mini-title">
+            🎶 Sangeet
+          </div>
+
+          <p>
+            Sat, 21 Nov 2026 · 4:00 PM<br />
+
+            <a
+              href="https://maps.app.goo.gl/FYpXBo9HoVuoKyMNA"
+              target="_blank"
+              rel="noopener"
+            >
+              📍 Dharmasagaram Village
+            </a>
+          </p>
+
+        </div>
+
+
+        <div class="event-mini">
+
+          <div class="event-mini-title">
+            🪔 Vivaah
+          </div>
+
+          <p>
+            Sat, 21 Nov 2026 · 9:00 AM<br />
+
+            <a
+              href="https://maps.app.goo.gl/FYpXBo9HoVuoKyMNA"
+              target="_blank"
+              rel="noopener"
+            >
+              📍 Dharmasagaram, Narsipatnam
+            </a>
+          </p>
+
+        </div>
+
+
+        <div class="event-mini">
+
+          <div class="event-mini-title">
+            ✨ Reception
+          </div>
+
+          <p>
+            Sat, 21 Nov 2026 · 6:00 PM<br />
+
+            <a
+              href="https://maps.app.goo.gl/FYpXBo9HoVuoKyMNA"
+              target="_blank"
+              rel="noopener"
+            >
+              📍 Dharmasagaram
+            </a>
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="divider"
+        style="margin-top:20px;"
+      ></div>
+
+      <p
+        style="font-size:clamp(16px,3vw,22px);color:rgba(255,248,225,0.85);font-style:italic;font-weight:600;"
+      >
+        Your presence and blessings will make our celebration complete. ❤️
+      </p>
+
+
+      <div class="summary-footer">
+
+        <div class="diya-row">
+          <span>🪔</span>
+          <span>🌸</span>
+          <span>🪔</span>
+          <span>🌸</span>
+          <span>🪔</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+       ===================================================== -->
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
